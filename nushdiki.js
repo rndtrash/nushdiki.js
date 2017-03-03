@@ -8,5 +8,12 @@ function getRandomInt(max) {
 }
 
 function random_nushdik() {
-	return fit[getRandomInt(fit.length - 1)] + ha[getRandomInt(ha.length - 1)];
+	var fit_num, ha_num = 0;
+	var success = false;
+	while(success == false) {
+		fit_num = getRandomInt(ha.length - 1);
+		ha_num = getRandomInt(ha.length - 1);
+		if(fit_num !== ha_num) success = true;
+	}
+	return fit[fit_num] + ha[ha_num];
 }
